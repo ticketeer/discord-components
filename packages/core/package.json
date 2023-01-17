@@ -1,6 +1,6 @@
 {
   "name": "@discord-components/core",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "publishConfig": {
     "access": "public"
   },
@@ -22,7 +22,7 @@
     "vite": "^4.0.4"
   },
   "dependencies": {
-    "@discord-components/markdown": "^0.2.0",
+    "@discord-components/markdown": "^0.2.2",
     "color-rgba": "^2.4.0"
   },
   "gitHead": "1e5ae8e0fe8afa656bfed9b95c9b61fd7aad3d4d"
