@@ -1,6 +1,6 @@
 {
   "name": "@discord-components/vue",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "publishConfig": {
     "access": "public"
   },
@@ -29,7 +29,7 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@discord-components/core": "^0.2.2"
+    "@discord-components/core": "^0.2.3"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
@@ -54,5 +54,5 @@
     "vue-loader": "^17.0.1",
     "vue-tsc": "^1.0.24"
   },
-  "gitHead": "1e5ae8e0fe8afa656bfed9b95c9b61fd7aad3d4d"
+  "gitHead": "b80c0c31919cf8eb435fa5ddad203b791eff6751"
 }
