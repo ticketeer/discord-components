@@ -1,1 +1,1 @@
-declare module '@discord-message-components/core'
+declare module '@discord-components/core'

@@ -7,40 +7,41 @@ import DiscordMessage from './DiscordMessage'
 import DiscordMessages from './DiscordMessages'
 
 export default {
-	title: 'DiscordEmbedField',
-	component: DiscordEmbedField,
-	argTypes: {
-		defaultSlot: {
-			control: 'text',
-			defaultValue: 'Field value',
-		},
-	},
+  title: 'DiscordEmbedField',
+  component: DiscordEmbedField,
+  argTypes: {
+    defaultSlot: {
+      control: 'text',
+      defaultValue: 'Field value',
+    },
+  },
 } as Meta
 
-const Template: Story<DiscordEmbedFieldProps & { defaultSlot?: string }> = args => (
-	<DiscordMessages>
-		<DiscordMessage>
-			Hello World
-			<DiscordEmbed slot="embeds">
-				Embed content
-				{args.fieldTitle
-					&& <DiscordEmbedFields slot="fields">
-						<DiscordEmbedField {...args}>{args.defaultSlot}</DiscordEmbedField>
-						<DiscordEmbedField {...args}>{args.defaultSlot}</DiscordEmbedField>
-						<DiscordEmbedField {...args}>{args.defaultSlot}</DiscordEmbedField>
-					</DiscordEmbedFields>}
-			</DiscordEmbed>
-		</DiscordMessage>
-	</DiscordMessages>
+const Template: Story<DiscordEmbedFieldProps & { defaultSlot?: string }> = (args) => (
+  <DiscordMessages>
+    <DiscordMessage>
+      Hello World
+      <DiscordEmbed slot="embeds">
+        Embed content
+        {args.fieldTitle && (
+          <DiscordEmbedFields slot="fields">
+            <DiscordEmbedField {...args}>{args.defaultSlot}</DiscordEmbedField>
+            <DiscordEmbedField {...args}>{args.defaultSlot}</DiscordEmbedField>
+            <DiscordEmbedField {...args}>{args.defaultSlot}</DiscordEmbedField>
+          </DiscordEmbedFields>
+        )}
+      </DiscordEmbed>
+    </DiscordMessage>
+  </DiscordMessages>
 )
 
 export const Default = Template.bind({})
 Default.args = {
-	fieldTitle: 'Field title',
+  fieldTitle: 'Field title',
 }
 
 export const InlineField = Template.bind({})
 InlineField.args = {
-	...Default.args,
-	inline: true,
+  ...Default.args,
+  inline: true,
 }

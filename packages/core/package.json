@@ -1,11 +1,11 @@
 {
-  "name": "@discord-message-components/core",
+  "name": "@discord-components/core",
   "version": "0.2.1",
   "publishConfig": {
     "access": "public"
   },
   "main": "./dist/core.umd.js",
-  "module": "./dist/core.es.js",
+  "module": "./dist/core.mjs",
   "types": "src/index.d.ts",
   "files": [
     "dist"
@@ -19,11 +19,11 @@
   "devDependencies": {
     "@types/color-rgba": "^2.1.0",
     "rollup-plugin-copy": "^3.4.0",
-    "vite": "^2.0.1"
+    "vite": "^4.0.4"
   },
   "dependencies": {
-    "@discord-message-components/markdown": "^0.2.0",
-    "color-rgba": "^2.2.3"
+    "@discord-components/markdown": "^0.2.0",
+    "color-rgba": "^2.4.0"
   },
   "gitHead": "1e5ae8e0fe8afa656bfed9b95c9b61fd7aad3d4d"
 }

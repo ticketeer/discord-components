@@ -1,12 +1,12 @@
 {
-	"extends": "../../tsconfig.json",
-	"compilerOptions": {
-		"allowJs": false,
-		"resolveJsonModule": true,
-		"types": ["vite/client"],
-	},
-	"include": [
-		"src/**/*.d.ts",
-		"src/**/*.ts",
-	]
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowJs": false,
+    "resolveJsonModule": true,
+    "types": ["vite/client"],
+    "declaration": true,
+		"outDir": "dist",
+		"declarationDir": "dist"
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.ts"]
 }

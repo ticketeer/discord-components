@@ -1,6 +1,6 @@
 # Discord Message Components
 
-Components to easily build and display fake Discord messages on your webpages. Currently available for [Vue 3](https://github.com/Danktuary/discord-message-components/tree/main/packages/vue) and [React](https://github.com/Danktuary/discord-message-components/tree/main/packages/react). Vue 2 and Web Components support coming soon.
+Components to easily build and display fake Discord messages on your webpages. Currently available for [Vue 3](https://github.com/ticketeer/discord-components/tree/main/packages/vue) and [React](https://github.com/ticketeer/discord-components/tree/main/packages/react). Vue 2 and Web Components support coming soon.
 
 ## Features
 
@@ -20,22 +20,22 @@ Coming soon!
 
 ## Installation and usage
 
-![@discord-message-components preview](https://i.imgur.com/ZxsfkHb.png)
+![@discord-components preview](https://i.imgur.com/ZxsfkHb.png)
 
 ### Vue
 
-Refer to [`@discord-message-components/vue`'s README](https://github.com/Danktuary/discord-message-components/tree/main/packages/vue#readme) for full notes and examples.
+Refer to [`@discord-components/vue`'s README](https://github.com/ticketeer/discord-components/tree/main/packages/vue#readme) for full notes and examples.
 
 ```sh
-yarn add @discord-message-components/vue
-# or npm install @discord-message-components/vue
+yarn add @discord-components/vue
+# or npm install @discord-components/vue
 ```
 
 ```js
 import { createApp } from 'vue'
-import { install as DiscordMessageComponents } from '@discord-message-components/vue'
+import { install as DiscordMessageComponents } from '@discord-components/vue'
 import App from './App.vue'
-import '@discord-message-components/vue/dist/style.css'
+import '@discord-components/vue/dist/style.scss'
 
 const app = createApp(App)
 
@@ -55,23 +55,23 @@ app.mount('#app')
 </template>
 
 <script setup>
-import { DiscordMessage, DiscordMessages } from '@discord-message-components/vue'
+import { DiscordMessage, DiscordMessages } from '@discord-components/vue'
 </script>
 ```
 
 ### React
 
-Refer to [`@discord-message-components/react`'s README](https://github.com/Danktuary/discord-message-components/tree/main/packages/react#readme) for full notes and examples.
+Refer to [`@discord-components/react`'s README](https://github.com/ticketeer/discord-components/tree/main/packages/react#readme) for full notes and examples.
 
 ```sh
-yarn add @discord-message-components/react
-# or npm install @discord-message-components/react
+yarn add @discord-components/react
+# or npm install @discord-components/react
 ```
 
 ```js
 import React from 'react'
-import { DiscordMessage, DiscordMessages } from '@discord-message-components/react'
-import '@discord-message-components/react/dist/style.css'
+import { DiscordMessage, DiscordMessages } from '@discord-components/react'
+import '@discord-components/react/dist/style.scss'
 
 export default function App() {
 	return (

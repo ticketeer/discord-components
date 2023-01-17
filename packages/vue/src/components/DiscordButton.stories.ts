@@ -5,29 +5,29 @@ import DiscordMessage from './DiscordMessage.vue'
 import DiscordMessages from './DiscordMessages.vue'
 
 export default {
-	title: 'DiscordButton',
-	component: DiscordButton,
-	argTypes: {
-		'default': {
-			control: 'text',
-			defaultValue: 'Button',
-		},
-	},
+  title: 'DiscordButton',
+  component: DiscordButton,
+  argTypes: {
+    default: {
+      control: 'text',
+      defaultValue: 'Button',
+    },
+  },
 } as Meta
 
-const Template: Story = args => ({
-	components: {
-		DiscordButton,
-		DiscordButtons,
-		DiscordMessage,
-		DiscordMessages,
-	},
-	setup() {
-		return {
-			args,
-		}
-	},
-	template: `
+const Template: Story = (args) => ({
+  components: {
+    DiscordButton,
+    DiscordButtons,
+    DiscordMessage,
+    DiscordMessages,
+  },
+  setup() {
+    return {
+      args,
+    }
+  },
+  template: `
 		<discord-messages>
 			<discord-message>
 				Hello World
@@ -45,48 +45,48 @@ export const Default = Template.bind({})
 
 export const Disabled = Template.bind({})
 Disabled.args = {
-	disabled: true,
+  disabled: true,
 }
 
 export const Image = Template.bind({})
 Image.args = {
-	image: 'https://i.imgur.com/0TeacfY.png',
+  image: 'https://i.imgur.com/0TeacfY.png',
 }
 
 export const PrimaryType = Template.bind({})
 PrimaryType.args = {
-	type: 'primary',
+  type: 'primary',
 }
 
 export const SecondaryType = Template.bind({})
 SecondaryType.args = {
-	type: 'secondary',
+  type: 'secondary',
 }
 
 export const SuccessType = Template.bind({})
 SuccessType.args = {
-	type: 'success',
+  type: 'success',
 }
 
 export const DangerType = Template.bind({})
 DangerType.args = {
-	type: 'danger',
+  type: 'danger',
 }
 
 export const LinkTypeWithoutURL = Template.bind({})
 LinkTypeWithoutURL.args = {
-	type: 'link',
+  type: 'link',
 }
 
 export const LinkTypeWithURL = Template.bind({})
 LinkTypeWithURL.args = {
-	type: 'link',
-	url: 'https://i.imgur.com/0TeacfY.png',
+  type: 'link',
+  url: 'https://i.imgur.com/0TeacfY.png',
 }
 
 export const LinkTypeWithImageAndURL = Template.bind({})
 LinkTypeWithImageAndURL.args = {
-	type: 'link',
-	image: 'https://i.imgur.com/0TeacfY.png',
-	url: 'https://i.imgur.com/0TeacfY.png',
+  type: 'link',
+  image: 'https://i.imgur.com/0TeacfY.png',
+  url: 'https://i.imgur.com/0TeacfY.png',
 }

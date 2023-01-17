@@ -1,4 +1,4 @@
-# @discord-message-components/markdown
+# @discord-components/markdown
 
 A markdown parser for Discord messages.
 
@@ -7,14 +7,14 @@ A markdown parser for Discord messages.
 ## Using
 
 ```bash
-yarn add @discord-message-components/markdown
-npm i @discord-message-components/markdown
+yarn add @discord-components/markdown
+npm i @discord-components/markdown
 ```
 
 For browser use, import `dist/markdown.min.js`
 
 ```js
-const { parser, htmlOutput, toHTML } = require('@discord-message-components/markdown')
+const { parser, htmlOutput, toHTML } = require('@discord-components/markdown')
 
 console.log(toHTML('This **is** a __test__'))
 // => This <strong>is</strong> a <u>test</u>
@@ -23,22 +23,22 @@ console.log(toHTML('This **is** a __test__'))
 ## Options
 
 ```js
-const { toHTML } = require('@discord-message-components/markdown')
+const { toHTML } = require('@discord-components/markdown')
 toHTML('This **is** a __test__', options)
 ```
 
 `options` is an object with the following properties (all are optional):
 
-* `embed`: Boolean (default: false), if it should parse embed contents (rules are slightly different)
-* `escapeHTML`: Boolean (default: true), if it should escape HTML
-* `discordOnly`: Boolean (default: false), if it should only parse the discord-specific stuff
-* `discordCallback`: Object, callbacks used for discord parsing. Each receive an object with different properties, and are expected to return an HTML escaped string
-  * `user`: (`id`: Number) User mentions "@someperson"
-  * `channel`: (`id`: Number) Channel mentions "#somechannel"
-  * `role`: (`id`: Number) Role mentions "@somerole"
-  * `everyone`: () Everyone mention "@everyone"
-  * `here`: () Here mention "@here"
-* `cssModuleNames`: Object, maps CSS class names to CSS module class names
+- `embed`: Boolean (default: false), if it should parse embed contents (rules are slightly different)
+- `escapeHTML`: Boolean (default: true), if it should escape HTML
+- `discordOnly`: Boolean (default: false), if it should only parse the discord-specific stuff
+- `discordCallback`: Object, callbacks used for discord parsing. Each receive an object with different properties, and are expected to return an HTML escaped string
+  - `user`: (`id`: Number) User mentions "@someperson"
+  - `channel`: (`id`: Number) Channel mentions "#somechannel"
+  - `role`: (`id`: Number) Role mentions "@somerole"
+  - `everyone`: () Everyone mention "@everyone"
+  - `here`: () Here mention "@here"
+- `cssModuleNames`: Object, maps CSS class names to CSS module class names
 
 ### Mention and Emoji Handling
 
@@ -47,11 +47,11 @@ Using the `discordCallback` option you can define custom functions to handle par
 Example:
 
 ```js
-const { toHTML } = require('@discord-message-components/markdown')
+const { toHTML } = require('@discord-components/markdown')
 toHTML('This is a mention for <@95286900801146880>', {
-	discordCallback: {
-		user: node => '@' + users[node.id],
-	},
+  discordCallback: {
+    user: (node) => '@' + users[node.id],
+  },
 }) // -> This is a mention for @Brussell
 ```
 

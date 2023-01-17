@@ -2,16 +2,16 @@ import { App } from 'vue'
 import { DiscordMessageOptions, defaultOptions } from './options'
 
 export const install = (app: App, options: DiscordMessageOptions): void => {
-	const avatars = { ...defaultOptions?.avatars, ...options?.avatars }
+  const avatars = { ...defaultOptions?.avatars, ...options?.avatars }
 
-	app.config.globalProperties.$discordOptions = {
-		...defaultOptions,
-		...options,
-		avatars: {
-			...avatars,
-			'default': defaultOptions.avatars[avatars.default] ?? avatars.default,
-		},
-	} as DiscordMessageOptions
+  app.config.globalProperties.$discordOptions = {
+    ...defaultOptions,
+    ...options,
+    avatars: {
+      ...avatars,
+      default: defaultOptions.avatars[avatars.default] ?? avatars.default,
+    },
+  } as DiscordMessageOptions
 }
 
 export { default as DiscordButton } from './components/DiscordButton.vue'

@@ -4,24 +4,24 @@ import DiscordMessage from './DiscordMessage'
 import DiscordMessages, { DiscordMessagesProps } from './DiscordMessages'
 
 export default {
-	title: 'DiscordMessages',
-	component: DiscordMessages,
+  title: 'DiscordMessages',
+  component: DiscordMessages,
 } as Meta
 
-const Template: Story<DiscordMessagesProps> = args => (
-	<DiscordMessages {...args}>
-		<DiscordMessage>Hello World</DiscordMessage>
-	</DiscordMessages>
+const Template: Story<DiscordMessagesProps> = (args) => (
+  <DiscordMessages {...args}>
+    <DiscordMessage>Hello World</DiscordMessage>
+  </DiscordMessages>
 )
 
 export const Default = Template.bind({})
 
 export const CompactMode = Template.bind({})
 CompactMode.args = {
-	compactMode: true,
+  compactMode: true,
 }
 
 export const LightTheme = Template.bind({})
 LightTheme.args = {
-	lightTheme: true,
+  lightTheme: true,
 }

@@ -6,30 +6,30 @@ import DiscordMessage from './DiscordMessage.vue'
 import DiscordMessages from './DiscordMessages.vue'
 
 export default {
-	title: 'DiscordEmbedField',
-	component: DiscordEmbedField,
-	argTypes: {
-		'default': {
-			control: 'text',
-			defaultValue: 'Field value',
-		},
-	},
+  title: 'DiscordEmbedField',
+  component: DiscordEmbedField,
+  argTypes: {
+    default: {
+      control: 'text',
+      defaultValue: 'Field value',
+    },
+  },
 } as Meta
 
-const Template: Story = args => ({
-	components: {
-		DiscordEmbed,
-		DiscordEmbedField,
-		DiscordEmbedFields,
-		DiscordMessage,
-		DiscordMessages,
-	},
-	setup() {
-		return {
-			args,
-		}
-	},
-	template: `
+const Template: Story = (args) => ({
+  components: {
+    DiscordEmbed,
+    DiscordEmbedField,
+    DiscordEmbedFields,
+    DiscordMessage,
+    DiscordMessages,
+  },
+  setup() {
+    return {
+      args,
+    }
+  },
+  template: `
 		<discord-messages>
 			<discord-message>
 				Hello World
@@ -52,11 +52,11 @@ const Template: Story = args => ({
 
 export const Default = Template.bind({})
 Default.args = {
-	fieldTitle: 'Field title',
+  fieldTitle: 'Field title',
 }
 
 export const InlineField = Template.bind({})
 InlineField.args = {
-	...Default.args,
-	inline: true,
+  ...Default.args,
+  inline: true,
 }

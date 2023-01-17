@@ -1,15 +1,15 @@
 <template>
-	<div class="discord-reactions">
-		<slot></slot>
-	</div>
+  <div class="discord-reactions">
+    <slot></slot>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+  import { defineComponent } from 'vue'
 
-export default defineComponent({
-	name: 'DiscordReactions',
-})
+  export default defineComponent({
+    name: 'DiscordReactions',
+  })
 </script>
 
-<style src="@discord-message-components/core/dist/styles/discord-reactions.css"></style>
+<style src="@discord-components/core/dist/styles/discord-reactions.scss"></style>

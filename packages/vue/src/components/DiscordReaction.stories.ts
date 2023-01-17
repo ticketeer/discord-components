@@ -5,31 +5,31 @@ import DiscordMessage from './DiscordMessage.vue'
 import DiscordMessages from './DiscordMessages.vue'
 
 export default {
-	title: 'DiscordReaction',
-	component: DiscordReaction,
-	argTypes: {
-		image: {
-			defaultValue: 'https://i.imgur.com/0TeacfY.png',
-		},
-		name: {
-			defaultValue: 'Sanc',
-		},
-	},
+  title: 'DiscordReaction',
+  component: DiscordReaction,
+  argTypes: {
+    image: {
+      defaultValue: 'https://i.imgur.com/0TeacfY.png',
+    },
+    name: {
+      defaultValue: 'Sanc',
+    },
+  },
 } as Meta
 
-const Template: Story = args => ({
-	components: {
-		DiscordReaction,
-		DiscordReactions,
-		DiscordMessage,
-		DiscordMessages,
-	},
-	setup() {
-		return {
-			args,
-		}
-	},
-	template: `
+const Template: Story = (args) => ({
+  components: {
+    DiscordReaction,
+    DiscordReactions,
+    DiscordMessage,
+    DiscordMessages,
+  },
+  setup() {
+    return {
+      args,
+    }
+  },
+  template: `
 		<discord-messages>
 			<discord-message>
 				Hello, again.
@@ -49,5 +49,5 @@ export const Default = Template.bind({})
 
 export const Active = Template.bind({})
 Active.args = {
-	active: true,
+  active: true,
 }
