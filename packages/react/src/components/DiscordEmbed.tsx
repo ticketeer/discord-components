@@ -1,7 +1,6 @@
 import React, { ReactElement, isValidElement } from 'react'
 import { util } from '@discord-components/core'
 import { PropsWithSlot, elementsWithoutSlot, findSlot } from '../util'
-import '@discord-components/core/dist/styles/discord-embed.scss'
 
 export type DiscordEmbedProps = {
   authorIcon?: string

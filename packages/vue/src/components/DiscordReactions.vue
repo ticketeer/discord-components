@@ -11,5 +11,3 @@
     name: 'DiscordReactions',
   })
 </script>
-
-<style src="@discord-components/core/dist/styles/discord-reactions.scss"></style>

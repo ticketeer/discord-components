@@ -14,8 +14,8 @@ export default defineConfig({
 					hook: 'writeBundle',
 					targets: [
 						{
-							src: './src/styles/*',
-							dest: './dist/styles/',
+							src: './src/styles.scss',
+							dest: './dist',
 						},
 					],
 				}),

@@ -1,3 +1,5 @@
+import '@discord-components/core/dist/styles.scss'
+
 import { App } from 'vue'
 import { DiscordMessageOptions, defaultOptions } from './options'
 

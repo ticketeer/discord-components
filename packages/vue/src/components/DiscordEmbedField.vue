@@ -21,5 +21,3 @@
     },
   })
 </script>
-
-<style src="@discord-components/core/dist/styles/discord-embed-field.scss"></style>

@@ -4,7 +4,6 @@ import { elementsWithoutSlot, findSlot } from '../util'
 import DiscordDefaultOptions, { DiscordMessageOptions, Profile } from '../context/DiscordDefaultOptions'
 import DiscordOptionsContext from '../context/DiscordOptionsContext'
 import AuthorInfo from './AuthorInfo'
-import '@discord-components/core/dist/styles/discord-message.scss'
 
 export type DiscordMessageProps = PropsWithChildren<{
   author?: string

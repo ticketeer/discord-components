@@ -103,4 +103,3 @@
   })
 </script>
 
-<style src="@discord-components/core/dist/styles/discord-message.scss"></style>

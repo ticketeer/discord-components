@@ -78,4 +78,3 @@
   })
 </script>
 
-<style src="@discord-components/core/dist/styles/discord-mention.scss"></style>

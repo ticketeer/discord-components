@@ -37,5 +37,3 @@
     },
   })
 </script>
-
-<style src="@discord-components/core/dist/styles/discord-messages.scss"></style>

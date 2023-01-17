@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react'
-import '@discord-components/core/dist/styles/discord-author-info.scss'
 
 type AuthorInfoProps = {
   author?: string

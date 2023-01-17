@@ -1,7 +1,6 @@
 import React, { Children, PropsWithChildren, ReactElement, cloneElement, useContext } from 'react'
 import DiscordDefaultOptions, { DiscordMessageOptions } from '../context/DiscordDefaultOptions'
 import DiscordOptionsContext from '../context/DiscordOptionsContext'
-import '@discord-components/core/dist/styles/discord-messages.scss'
 
 export type DiscordMessagesProps = PropsWithChildren<{
   compactMode?: boolean

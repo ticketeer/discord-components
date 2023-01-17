@@ -4,7 +4,6 @@ import DiscordDefaultOptions, { DiscordMessageOptions, Profile } from '../contex
 import DiscordOptionsContext from '../context/DiscordOptionsContext'
 import { PropsWithSlot } from '../util'
 import AuthorInfo from './AuthorInfo'
-import '@discord-components/core/dist/styles/discord-interaction.scss'
 
 export type DiscordInteractionProps = {
   author?: string

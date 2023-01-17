@@ -1,6 +1,5 @@
 import React, { Children, ReactElement, ReactNode } from 'react'
 import { util } from '@discord-components/core'
-import '@discord-components/core/dist/styles/discord-markdown.scss'
 
 export default function DiscordMarkdown({ children }: { children?: ReactNode }): ReactElement {
   const parsedContent = Children.map(

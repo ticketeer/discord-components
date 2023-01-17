@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react'
 import { PropsWithSlot } from '../util'
 import OutboundLinkIcon from './OutboundLinkIcon'
-import '@discord-components/core/dist/styles/discord-button.scss'
 
 export type DiscordButtonProps = {
   disabled?: boolean

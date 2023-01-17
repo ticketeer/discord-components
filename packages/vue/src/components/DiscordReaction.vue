@@ -25,4 +25,3 @@
   })
 </script>
 
-<style src="@discord-components/core/dist/styles/discord-reaction.scss"></style>

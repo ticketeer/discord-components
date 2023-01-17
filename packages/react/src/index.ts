@@ -1,3 +1,5 @@
+import '@discord-components/core/dist/styles.scss'
+
 export { default as DiscordButton } from './components/DiscordButton'
 export { default as DiscordButtons } from './components/DiscordButtons'
 export { default as DiscordDefaultOptions } from './context/DiscordDefaultOptions'

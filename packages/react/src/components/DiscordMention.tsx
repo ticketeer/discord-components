@@ -2,7 +2,6 @@ import React, { PropsWithChildren, ReactElement, useContext, useEffect, useRef, 
 import { util } from '@discord-components/core'
 import DiscordDefaultOptions, { DiscordMessageOptions, Profile } from '../context/DiscordDefaultOptions'
 import DiscordOptionsContext from '../context/DiscordOptionsContext'
-import '@discord-components/core/dist/styles/discord-mention.scss'
 
 export type DiscordMentionProps = PropsWithChildren<{
   highlight?: boolean
