@@ -4,13 +4,13 @@
     <div class="discord-embed-container">
       <div class="discord-embed-content">
         <div>
-          <div v-if="author.name" class="discord-embed-author">
-            <img v-if="author.icon" class="discord-embed-author-icon" :src="author.icon" alt="" />
-            <a v-if="author.url" :href="author.url" target="_blank" rel="noopener noreferrer">
-              {{ author.name }}
+          <div v-if="authorName" class="discord-embed-author">
+            <img v-if="authorIcon" class="discord-embed-author-icon" :src="authorIcon" alt="" />
+            <a v-if="authorUrl" :href="authorUrl" target="_blank" rel="noopener noreferrer">
+              {{ authorName }}
             </a>
             <span v-else>
-              {{ author.name }}
+              {{ authorName }}
             </span>
           </div>
           <div v-if="embedTitle" class="discord-embed-title">
@@ -29,13 +29,13 @@
         </div>
         <img v-if="thumbnail" class="discord-embed-thumbnail" :src="thumbnail" alt="" />
       </div>
-      <div v-if="showFooter" class="discord-embed-footer">
-        <img v-if="showFooterIcon" class="discord-embed-footer-icon" :src="footerIcon" alt="" />
+      <div v-if="$slots.footer && timestamp" class="discord-embed-footer">
+        <img v-if="$slots.footer && footerIcon" class="discord-embed-footer-icon" :src="footerIcon" alt="" />
         <span>
           <slot name="footer"></slot>
-          <span v-if="showFooterSeparator" class="discord-embed-footer-separator">&bull;</span>
-          <span v-if="embedTimestamp">
-            {{ embedTimestamp }}
+          <span v-if="$slots.footer && timestamp" class="discord-embed-footer-separator">&bull;</span>
+          <span v-if="timestamp">
+            {{ parseTimestamp(timestamp) }}
           </span>
         </span>
       </div>
@@ -44,7 +44,7 @@
 </template>
 
 <script lang="ts">
-  import { computed, defineComponent, toRefs } from 'vue'
+  import { defineComponent } from 'vue'
   import { util } from '@discord-components/core'
 
   export default defineComponent({
@@ -62,25 +62,8 @@
       url: String,
     },
     setup(props, { slots }) {
-      const { authorIcon, authorName, authorUrl, footerIcon, timestamp } = toRefs(props)
-
-      const author = computed(() => ({
-        icon: authorIcon?.value,
-        name: authorName?.value,
-        url: authorUrl?.value,
-      }))
-
-      const embedTimestamp = computed(() => (timestamp?.value ? util.parseTimestamp({ timestamp: timestamp.value }) : null))
-      const showFooter = computed(() => slots.footer || embedTimestamp.value)
-      const showFooterIcon = computed(() => slots.footer && footerIcon?.value)
-      const showFooterSeparator = computed(() => slots.footer && embedTimestamp.value)
-
       return {
-        author,
-        embedTimestamp,
-        showFooter,
-        showFooterIcon,
-        showFooterSeparator,
+        parseTimestamp: util.parseTimestamp,
       }
     },
   })
