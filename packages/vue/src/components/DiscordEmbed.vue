@@ -29,13 +29,13 @@
         </div>
         <img v-if="thumbnail" class="discord-embed-thumbnail" :src="thumbnail" alt="" />
       </div>
-      <div v-if="$slots.footer && timestamp" class="discord-embed-footer">
+      <div v-if="$slots.footer || timestamp" class="discord-embed-footer">
         <img v-if="$slots.footer && footerIcon" class="discord-embed-footer-icon" :src="footerIcon" alt="" />
         <span>
           <slot name="footer"></slot>
           <span v-if="$slots.footer && timestamp" class="discord-embed-footer-separator">&bull;</span>
           <span v-if="timestamp">
-            {{ parseTimestamp(timestamp) }}
+            {{ parseTimestamp({ timestamp }) }}
           </span>
         </span>
       </div>
